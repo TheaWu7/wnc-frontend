@@ -5,6 +5,7 @@ export default function Register() {
     {
       name: "昵称",
       placeholder: "请输入昵称",
+      type: "tel",
     },
     {
       name: "手机号",
@@ -22,13 +23,11 @@ export default function Register() {
     },
   ];
   return (
-    <div>
-      <div className={style.topWrapper}>
-        <header className={style.title}>用手机号注册</header>
-        <div className={style.upload}>
-          <input type="file" style={{ display: "none" }} />
-          <img src="/assets/register.svg" alt="register" width="42px" />
-        </div>
+    <div className={style.container}>
+      <header className={style.title}>用手机号注册</header>
+      <div className={style.upload}>
+        <input type="file" style={{ display: "none" }} />
+        <img src="/assets/register.svg" alt="register" width="42px" />
       </div>
       <div className={style.formWrapper}>
         {formList.map((v) => {

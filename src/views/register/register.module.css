@@ -1,9 +1,9 @@
-/* topWrapper start */
-.topWrapper {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* topWrapper start */
 .title {
   margin-top: 120px;
   font-size: 20px;
@@ -24,12 +24,13 @@
 
 /* formWrapper start */
 .formWrapper {
+  width: 100%;
   margin-top: 36px;
 }
 .formItem {
   position: relative;
   border-top: 1px solid #efefef;
-  padding: 15px 0;
+  padding: 10px 0;
   margin: 0 15px;
 }
 .formItem:last-child {
@@ -42,16 +43,15 @@
 .formItem button {
   position: absolute;
   right: 0;
-  top: 12px;
+  top: 10px;
   padding: 5px 8px;
 }
 /* formWrapper end */
 
 /* btnWrapper start */
 .btnWrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 220px;
+  position: absolute;
+  bottom: 160px;
 }
 .registerBtn {
   width: 200px;
