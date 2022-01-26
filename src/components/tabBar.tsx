@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
 import style from "./tabBar.module.css";
 
 export default function TabBar() {
@@ -37,7 +36,7 @@ export default function TabBar() {
       {tabBarList.map((v) => {
         return (
           <Link to={v.url} key={v.name} className={style.tabItem}>
-            <img src={pathname === v.url ? v.activeIcon : v.icon} alt="" width="30px" />
+            <img src={pathname === v.url ? v.activeIcon : v.icon} alt="" width="25px" />
             <span className={pathname === v.url ? style.activeNav : ""}>{v.name}</span>
           </Link>
         );

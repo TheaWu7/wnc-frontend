@@ -7,9 +7,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 85px;
+  height: 78px;
   border: 1px solid #efefef;
-  padding: 0 20px;
+  padding: 0 25px;
+  background: #f8f8f8;
 }
 
 .tabItem {
@@ -21,6 +22,7 @@
 }
 .tabItem span {
   margin-top: 3px;
+  font-size: 14px;
   color: #333;
 }
 .tabItem .activeNav {
