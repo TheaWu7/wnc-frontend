@@ -17,7 +17,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 .tabItem span {
   margin-top: 3px;
+  color: #333;
+}
+.tabItem .activeNav {
+  color: #50bf70;
 }
