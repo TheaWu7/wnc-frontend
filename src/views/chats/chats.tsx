@@ -5,8 +5,7 @@ import style from "./chats.module.css";
 export default function Chats() {
   return (
     <div className={style.container}>
-      <TopBar />
-      chats
+      <TopBar title="Chats" urlRight="/assets/topBar/add.svg" />
       <TabBar />
     </div>
   );

@@ -1,20 +1,35 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./topBar.module.css";
 
-export default function TopBar() {
+interface ITopBarProps {
+  urlLeft?: string;
+  title?: string;
+  urlRight?: string;
+}
+
+const TopBar: React.FC<ITopBarProps> = ({ urlLeft, title, urlRight }) => {
   const navigate = useNavigate();
+
   return (
     <div className={style.container}>
-      <img
-        src="/assets/topBar/arrow-left.svg"
-        alt=""
-        width="22px"
-        onClick={() => {
-          navigate(-1);
-        }}
-      />
-      <header>Contacts</header>
-      <img src="/assets/topBar/add.svg" alt="" width="24px" />
+      {urlLeft ? (
+        <img
+          className={style.leftImg}
+          src={urlLeft}
+          alt=""
+          width="22px"
+          onClick={() => {
+            navigate(-1);
+          }}
+        />
+      ) : (
+        ""
+      )}
+      <header>{title}</header>
+      {urlRight ? <img className={style.rightImg} src={urlRight} alt="" width="22px" /> : ""}
     </div>
   );
-}
+};
+
+export default TopBar;
