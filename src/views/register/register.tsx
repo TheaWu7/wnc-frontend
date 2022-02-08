@@ -24,7 +24,7 @@ export default function Register() {
   ];
   return (
     <div className={style.container}>
-      <header className={style.title}>用手机号注册</header>
+      <div className={style.title}>用手机号注册</div>
       <div className={style.upload}>
         <input type="file" style={{ display: "none" }} />
         <img src="/assets/register.svg" alt="register" width="42px" />

@@ -33,14 +33,18 @@ export default function Login() {
 
   return (
     <div className={style.container}>
-      <header className={style.title}>手机号登录</header>
+      <div className={style.title}>手机号登录</div>
       <div className={style.formWrapper}>
         {formList.map((v) => {
           return (
             <div className={style.formItem} key={v.name}>
               <span>{v.name}</span>
               <input type={v.type ?? "text"} placeholder={v.placeholder} />
-              {v.name === "手机号" && usePwd ? <button className="idDisabled">获取验证码</button> : ""}
+              {v.name === "手机号" && usePwd ? (
+                <button className="idDisabled">获取验证码</button>
+              ) : (
+                ""
+              )}
             </div>
           );
         })}
